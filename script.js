@@ -7,7 +7,7 @@ const playerSelection = function () {
     return answer;
   } else {
     alert("Please choose between Rock, Paper or Scissors");
-    playerSelection();
+    return (answer = prompt("Rock, Paper, Scissors?")?.toLowerCase());
   }
 };
 
@@ -52,38 +52,38 @@ const playRound = function (playerSelection, computerSelection) {
     alert(
       `You win! ${playerSelectionCapitalized} beats ${computerSelectionCapitalized}`
     );
-    playerScore++;
-    return playerScore;
+
+    return playerScore++;
   } else if (playerSelection == "paper" && computerSelection == "rock") {
     alert(
       `You win! ${playerSelectionCapitalized} beats ${computerSelectionCapitalized}`
     );
-    playerScore++;
-    return playerScore;
+
+    return playerScore++;
   } else if (playerSelection == "scissors" && computerSelection == "paper") {
     alert(
       `You win! ${playerSelectionCapitalized} beats ${computerSelectionCapitalized}`
     );
-    playerScore++;
-    return playerScore;
+
+    return playerScore++;
   } else if (playerSelection == "rock" && computerSelection == "paper") {
     alert(
       `You lose! ${computerSelectionCapitalized} beats ${playerSelectionCapitalized}`
     );
-    computerScore++;
-    return computerScore;
+
+    return computerScore++;
   } else if (playerSelection == "paper" && computerSelection == "scissors") {
     alert(
       `You lose! ${computerSelectionCapitalized} beats ${playerSelectionCapitalized}`
     );
-    computerScore++;
-    return computerScore;
+
+    return computerScore++;
   } else if (playerSelection == "scissors" && computerSelection == "rock") {
     alert(
       `You lose! ${computerSelectionCapitalized} beats ${playerSelectionCapitalized}`
     );
-    computerScore++;
-    return computerScore;
+
+    return computerScore++;
   } else {
     return alert("It's a draw");
   }
