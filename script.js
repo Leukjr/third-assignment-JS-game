@@ -35,53 +35,34 @@ const computerSelection = function () {
 
 // Helper function to capitalize first letter of a string
 
-const capitalizeFirstLetter = function (string) {
-  return string[0].toUpperCase() + string.slice(1);
-};
-
 // Function for one round play
 
 let playerScore = 0;
 let computerScore = 0;
 
 const playRound = function (playerSelection, computerSelection) {
-  const playerSelectionCapitalized = capitalizeFirstLetter(playerSelection);
-  const computerSelectionCapitalized = capitalizeFirstLetter(computerSelection);
-
   if (playerSelection == "rock" && computerSelection == "scissors") {
-    alert(
-      `You win! ${playerSelectionCapitalized} beats ${computerSelectionCapitalized}`
-    );
+    alert(`You win! ${playerSelection} beats ${computerSelection}`);
 
     return playerScore++;
   } else if (playerSelection == "paper" && computerSelection == "rock") {
-    alert(
-      `You win! ${playerSelectionCapitalized} beats ${computerSelectionCapitalized}`
-    );
+    alert(`You win! ${playerSelection} beats ${computerSelection}`);
 
     return playerScore++;
   } else if (playerSelection == "scissors" && computerSelection == "paper") {
-    alert(
-      `You win! ${playerSelectionCapitalized} beats ${computerSelectionCapitalized}`
-    );
+    alert(`You win! ${playerSelection} beats ${computerSelection}`);
 
     return playerScore++;
   } else if (playerSelection == "rock" && computerSelection == "paper") {
-    alert(
-      `You lose! ${computerSelectionCapitalized} beats ${playerSelectionCapitalized}`
-    );
+    alert(`You lose! ${computerSelection} beats ${playerSelection}`);
 
     return computerScore++;
   } else if (playerSelection == "paper" && computerSelection == "scissors") {
-    alert(
-      `You lose! ${computerSelectionCapitalized} beats ${playerSelectionCapitalized}`
-    );
+    alert(`You lose! ${computerSelection} beats ${playerSelection}`);
 
     return computerScore++;
   } else if (playerSelection == "scissors" && computerSelection == "rock") {
-    alert(
-      `You lose! ${computerSelectionCapitalized} beats ${playerSelectionCapitalized}`
-    );
+    alert(`You lose! ${computerSelection} beats ${playerSelection}`);
 
     return computerScore++;
   } else {
