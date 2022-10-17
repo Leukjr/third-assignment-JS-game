@@ -7,7 +7,7 @@ const playerSelection = function () {
     return answer;
   } else {
     alert("Please choose between Rock, Paper or Scissors");
-    return (answer = prompt("Rock, Paper, Scissors?")?.toLowerCase());
+    return playerSelection();
   }
 };
 
